@@ -23,7 +23,7 @@
         tg.style.right = z + "px";
 
         let audio = new Audio();
-        audio.src = "cod.ogg";
+        audio.src = "count.ogg";
         audio.play();
 
         }
@@ -96,8 +96,8 @@
          let Sec = sec;
 
 
-        clearInterval(Sec);
-        clearInterval(Score);
+        sec1.style.display = "block";
+        score1.style.display = "block";
 
         }
 
