@@ -2,6 +2,10 @@
     cursor:url('cyanMiniCircle.png'), auto;
  }
 
+body {
+    background:gray;
+}
+
 
  #hitbox {
 
