@@ -14,9 +14,9 @@
 
         tg = document.getElementById('hitbox2');
 
-        x = (Math.random() * 530) + 1;
-        y = (Math.random() * 530) + 1;
-        z = (Math.random() * 530) + 1;
+        x = (Math.random() * 580) + 1;
+        y = (Math.random() * 580) + 1;
+        z = (Math.random() * 580) + 1;
 
         tg.style.left = x + "px";
         tg.style.top = y + "px";
@@ -69,7 +69,7 @@
 
         }
 
-        }, 400);
+        }, 300);
 
         }
 
