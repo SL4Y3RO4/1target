@@ -23,7 +23,7 @@
         tg.style.right = z + "px";
 
         let audio = new Audio();
-        audio.src = "count.ogg";
+        audio.src = "119415__joedeshon__rocker-switch.ogg";
         audio.play();
 
         }
