@@ -12,6 +12,14 @@
     <button type="button" id="start">start</button>
     <h1 id="score">score: 0</h1>
     <h1 id="seconds">seconds: 20</h1>
+
+    <div id="crosshair">
+    <div id="cross_field"><img src="cyanMiniCircle.png" alt="fsfsdgf"></div>
+    <div id="cross_field2"><img src="blackMiniCircle.png" alt="fsfsdgf"></div>
+    <div id="cross_field3"><img src="blackCircle.cur" alt="fsfsdgf"></div>
+    <div id="cross_field4"><img src="Belecursor.cur" alt="fsfsdgf"></div>
+    <div id="cross_field5"><img src="crossu.png" alt="fsfsdgf"></div>
+    </div>
   
 
 
@@ -51,6 +59,11 @@
     let Decay;
     let decadi = document.getElementById('hitbox');
     let d = document.getElementById('seconds');
+    let cross_field = document.getElementById('cross_field2');
+    let cross_field2 = document.getElementById('cross_field2');
+    let cross_field3 = document.getElementById('cross_field3');
+    let cross_field4 = document.getElementById('cross_field4');
+    let cross_field5 = document.getElementById('cross_field5');
 
 	
 	
@@ -145,6 +158,36 @@
     }, 175);
 
     }
+
+    cross_field.addEventListener('click', function() {
+
+    document.body.style.cursor = 'url("cyankMiniCircle"), auto';
+
+    });
+
+    cross_field2.addEventListener('click', function() {
+
+    document.body.style.cursor = 'url("blackMiniCircle"), auto';
+
+    });
+
+    cross_field3.addEventListener('click', function() {
+
+    document.body.style.cursor = 'url("blackCircle.cur"), auto';
+
+    });
+
+    cross_field4.addEventListener('click', function() {
+
+    document.body.style.cursor = 'url("Belecursor.cur"), auto';
+
+    });
+
+    cross_field5.addEventListener('click', function() {
+
+    document.body.style.cursor = 'url("crossu.png"), auto';
+
+    });
 	
    </script>
         
@@ -157,7 +200,7 @@
 
 *{ 
 
-    cursor:url('Belecursor.cur'), auto;
+    cursor:pointer;
     font-family:arial;
 
 } 
