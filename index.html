@@ -64,7 +64,7 @@
     let cross_field3 = document.getElementById('cross_field3');
     let cross_field4 = document.getElementById('cross_field4');
     let cross_field5 = document.getElementById('cross_field5');
-
+    let starta = document.getElementById('start');
 	
 	
 	
@@ -133,7 +133,7 @@
 
     seconds.style.display = 'none';
     score.style.display = 'none';
-    button.style.display = 'none';
+    starta.style.display = 'none';
 
     s = 20;
     time = setInterval(function() {
@@ -146,7 +146,7 @@
         clearInterval(time);
         seconds.style.display = 'block';
         score.style.display = 'block';
-	button.style.display = 'block';
+	starta.style.display = 'block';
         let seconds1 = document.getElementById('seconds');
         seconds1.innerHTML = "Game_Over";
         hitbox.removeEventListener('mouseover', tp_target);
