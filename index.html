@@ -1,0 +1,235 @@
+<html>
+
+    <head>
+      <title>@@@</title>        
+    </head>
+
+    <body>
+
+    <!-- setup -->
+
+    <button type="button" id="btn">chng background</button>
+    <button type="button" id="btn_cross">chng crosshair</button>
+    <button type="button" id="start">start</button>
+    <h1 id="score">score: 0</h1>
+    <h1 id="seconds">seconds: 20</h1>
+    <input type="placeholder" id="attribute">
+
+
+
+<!-- target setup -->
+
+<div id="spawn">
+<div id="hitbox" onmouseover="point()">
+
+     <div id="t" onmouseover="decay()"></div>
+
+</div>
+</div>
+
+    <script>
+
+    //global variables
+
+    let i = document.getElementById('t');
+	let hitbox = document.getElementById('hitbox');
+	let spawn = document.getElementById('spawn');
+	let y;
+	let x;
+	let z;
+    let button = document.getElementById('btn');
+    let slot;
+    let cross;
+    button_cross = document.getElementById('btn_cross');
+    let score = document.getElementById('score');
+    let seconds = document.getElementById('seconds');
+    let s;
+    let time;
+    let p;
+    let start = document.getElementById('start');
+    let attrib = '';
+    let attrib_field = document.getElementById('attribute');
+    let Decay;
+    let decadi = document.getElementById('hitbox');
+    let d = document.getElementById('seconds');
+
+	
+	
+	
+	hitbox.addEventListener('mouseover', tp_target);
+	
+	function tp_target() {
+	
+	x = (Math.random() * 500);
+	y = (Math.random() * 500);
+	y = (Math.random() * 500);
+	
+	hitbox.style.left = x + 'px';
+    hitbox.style.top = y + 'px';
+    hitbox.style.right = z + 'px'; 	 
+
+    let audio = new Audio();
+    audio.src = "8Bit2.ogg";
+    audio.play();
+
+    }
+
+    button.addEventListener('click', setDark);
+
+
+    function setDark() { 
+
+    if(document.body.style.background == 'white') { 
+
+    document.body.style.background = 'gray';
+
+    } else {
+
+    document.body.style.background = 'white';
+
+    }
+
+    }
+
+    /*button_cross.addEventListener('click', crosshair);
+
+    function crosshair() { 
+
+    slot = ['blackMiniCircle'];
+
+    for(cross = 0; cross < slot; cross++) {
+    cross[0].style.cursor = 'url('cross[0]')' 
+    cross++;
+    }
+
+    }
+*/
+
+    p = 0;
+
+    let hitbox1 = document.getElementById('spawn');
+    hitbox1.addEventListener('mouseover', point);
+
+    function point() { 
+
+   
+    score.innerHTML = "score: " + p;
+    p++;
+
+    }
+    
+
+    decadi.addEventListener('mouseover', decay);
+
+    function decay() {
+
+    Decay = s++;
+    d.innerHTML = "seconds: " + Decay;
+    Decay++;
+
+    }
+
+    start.addEventListener('click', _start_);
+
+    function _start_() { 
+
+    seconds.style.display = 'none';
+    score.style.display = 'none';
+
+    s = 20;
+    time = setInterval(function() {
+
+    seconds.innerHTML = "seconds: " + s;
+    s--;
+
+    if(s == -1) {
+
+        clearInterval(time);
+        seconds.style.display = 'block';
+        score.style.display = 'block';
+        let seconds1 = document.getElementById('seconds');
+        seconds1.innerHTML = "Game_Over";
+        hitbox.removeEventListener('mouseover', tp_target);
+        decadi.removeEventListener('mouseover', decay);
+        hitbox1.removeEventListener('mouseover', point);
+        
+
+    }
+
+
+    }, 175);
+
+    }
+
+
+    
+    
+
+	
+    </script>
+        
+    </body>
+</html>
+
+
+
+<style>
+
+*{ 
+
+    cursor:url('blackMiniCircle.png'), auto;
+    font-family:arial;
+
+} 
+
+#t {
+
+    height:90px;
+    width:90px;
+    border-radius:45px;
+    position:absolute;
+    background:black;
+
+}
+
+#hitbox {
+
+    position:absolute;
+    height:95px;
+    width:95px;
+
+}
+
+#spawn {
+
+    position:absolute;
+    left:41%;
+    top:37%;
+
+}
+
+#seconds {
+
+    position:absolute;
+    left:45%;
+    top:12%;
+
+}
+
+#score {
+    
+    position:absolute;
+    top:12%;
+    left:31%;
+}
+
+#start {
+
+    position:absolute;
+    left:42%;
+    background:black;
+    height:40px;
+    width:60px;
+}
+
+
