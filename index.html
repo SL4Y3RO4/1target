@@ -133,6 +133,7 @@
 
     seconds.style.display = 'none';
     score.style.display = 'none';
+    button.style.display = 'none';
 
     s = 20;
     time = setInterval(function() {
@@ -145,6 +146,7 @@
         clearInterval(time);
         seconds.style.display = 'block';
         score.style.display = 'block';
+	button.style.display = 'block';
         let seconds1 = document.getElementById('seconds');
         seconds1.innerHTML = "Game_Over";
         hitbox.removeEventListener('mouseover', tp_target);
